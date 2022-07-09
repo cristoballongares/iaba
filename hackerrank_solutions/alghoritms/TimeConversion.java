@@ -5,60 +5,30 @@ import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
+import java.time.format.DateTimeFormatter
 
-	
 
 public class index{
 
-    public static String
-    removingUpperCaseCharacters(String la)
-    {
- 
-        String regex = "[A-Z]";
- 
-        Pattern pattern = Pattern.compile(regex);
- 
-        Matcher matcher = pattern.matcher(la);
- 
-        return matcher.replaceAll("");
-    }
-
 
     public static void main(String[] args) {
-Scanner in = new Scanner(System.in);
-String time;
-int count=0,i=11,sum=0,j=11,res=0;
-System.out.print("Ingresa la hora formato HH:mm:ssPM/AM : ");
-time = in.next();
+DateTimeFormatter dtf = DateTimeFormatter.offPatter("hh:mm:ssa")
 
-String[] oh = time.split(":");
+	Scanner in = new Scanner(System.in);
+	String time = in.nextLine();
+	   DateFormat inFormat = new SimpleDateFormat( "hh:mm:ssaa");
+       DateFormat outFormat = new SimpleDateFormat( "HH:mm:ss");
+Date date = null;
 
-int hour = Integer.parseInt(oh[0]);
-String la = String.valueOf(oh[2]);
-la = la.substring(0,0) + la.substring(2);
-int n = hour;
-sum = hour+i;
-res = hour-j;
-System.out.println(la);
-switch(la){
-	case "PM":
-		while(i<=sum){
-		i++;
-	}
-	la = la.substring(0,2);
-	System.out.println(i+":"+oh[1]+":"+la);
-	break;
+try{
+	date = inFormat.parse(s);
+}catch(ParseException e){
+	e.printStackTrace();
+}
 
-	case "AM":
-		if(hour==12){
-			while(j>=res){
-				j--;
-			}
-			System.out.println(j+":"+oh[1]+":"+removingUpperCaseCharacters(la));
-			}else{				
-				System.out.println(oh[0]+":"+oh[1]+":"+la);
-			}
-				break;
+if(date!=null){
+	String outdate = outFormat.format(time);
+	System.out.println(time);
 }
 
     }
