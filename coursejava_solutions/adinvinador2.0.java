@@ -27,7 +27,7 @@ public static class Coche{
 				System.out.printf("El numero a adivinar es mayor\n");
 			} else if(inputNumber<secretNumber){
 				System.out.printf("El numero a adivinar es menor\n");
-			} else if(inputNumber==secretNumber){
+			}else if(inputNumber==secretNumber){
 				break;
 			}
 			count++;
