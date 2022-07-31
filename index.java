@@ -57,82 +57,34 @@ public class index{
 					}
 			}
 			for(k=0;k<4;k++){
-				if(compareR[0]==characters[k] && compareR[0]==characters[j-1]){
-					if(k==0){
-					} else{
+				l=k+1;
+				System.out.println("L: "+l); // Basicamente lo hago que es, comparar del 0 al 4, el del 4 al 0 del 0 a una posicion antes y asi aaaa
+				if(compareR[0]==characters[k] && compareR[k]==characters[0] && compareR[0]!=characters[l-1] && compareR[l-1]!=characters[0] && compareR[k]!=characters[k] && l!=0){
 						r++;
-						m++;
-					}
-					System.out.println("0: "+r);
-				} 
-				if(compareR[1]==characters[k] && compareR[1]==characters[j-1]){
-					if(k==1){
-					} else{
+				System.out.println("0: "+r);
+				 }
+				if(compareR[1]==characters[k] && compareR[k]==characters[1] &&  compareR[1]!=characters[l-1] && compareR[l-1]!=characters[1] && compareR[k]!=characters[k] && l!=1){
 						r++;
-						l++;
-					}
 					System.out.println("1: "+r);
 				} 
-				if(compareR[2]==characters[k] && compareR[2]==characters[j-1]){
-					if(k==2){
-					} else{
+				if(compareR[2]==characters[k] && compareR[k]==characters[2] &&  compareR[2]!=characters[l-1] && compareR[l-1]!=characters[2] && compareR[k]!=characters[k] && l!=2){
 						r++;
-						a++;
-					}
 					System.out.println("2: "+r);
 				} 
-				if(compareR[3]==characters[k] && compareR[3]==characters[j-1]){
-					if(k==3){
-						c++;
-					} else {
+				if(compareR[3]==characters[k] && compareR[k]==characters[3] &&  compareR[3]!=characters[l-1] && compareR[l-1]!=characters[3] && compareR[k]!=characters[k] && l!=3){
 						r++;
-						c++;
-					}
 					System.out.println("3: "+r);
 				}
-				
+			
 			}
+				
 
 			/*
-			if(compareR[0]==characters[1] && compareR[0]!=characters[0]){
-				r++;
-			} 
-			if(compareR[0]==characters[2] && compareR[0]!=characters[1]){
-				r++;
-			}
-			if(compareR[0] == characters[3] && compareR[0]!=characters[2]){
-				r++;
-			}
-			if(compareR[1] == characters[0] && compareR[1]!=characters[1]){
-				r++;
-			} 
-			if(compareR[1] == characters[2] && compareR[1]!=characters[3]){
-				r++;
-			} 
-			if(compareR[1] == characters[3] && compareR[1]!=characters[2]){
-				r++;
-			}
-			if(compareR[2] == characters[3] && compareR[2]!=characters[2]){
-				r++;
-			}
-			if(compareR[2] == characters[1] && compareR[2]!=characters[0]){
-				r++;
-			}
-			if(compareR[2] == characters[0] && compareR[2]!=characters[1]){
-				r++;
-			}
-			if(compareR[3] == characters[1] && compareR[3]!=characters[0]){
-				r++;
-			}
-			if(compareR[3] == characters[2] && compareR[3]!=characters[1]){
-				r++;
-			}
-			if(compareR[3] == characters[0] && compareR[3]!=characters[3]){
-				r++;
 			}
 			*/
 			System.out.print("\nB: "+b+"\nR: "+r);
 
-		}
+		
 	}
+}
 }
