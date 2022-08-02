@@ -42,10 +42,6 @@ public class index{
 		while(i<11){
 			b=0; // puntaje
 			r=0; // puntaje
-			m=0;
-			l=0;
-			a=0;
-			c=0;
 			System.out.print("\nIntento "+i+"\nEscribe la combinacion que piensas que sea correcta >> [uhdl], [fkcy] ");
 			respuesta = in.nextLine();
 			System.out.println();
@@ -57,25 +53,18 @@ public class index{
 					}
 			}
 			for(k=0;k<4;k++){
-				l=k+1;
-				System.out.println("L: "+l); // Basicamente lo hago que es, comparar del 0 al 4, el del 4 al 0 del 0 a una posicion antes y asi aaaa
-				if(compareR[0]==characters[k] && compareR[k]==characters[0] && compareR[0]!=characters[l-1] && compareR[l-1]!=characters[0] && compareR[k]!=characters[k] && l!=0){
-						r++;
-				System.out.println("0: "+r);
-				 }
-				if(compareR[1]==characters[k] && compareR[k]==characters[1] &&  compareR[1]!=characters[l-1] && compareR[l-1]!=characters[1] && compareR[k]!=characters[k] && l!=1){
-						r++;
-					System.out.println("1: "+r);
-				} 
-				if(compareR[2]==characters[k] && compareR[k]==characters[2] &&  compareR[2]!=characters[l-1] && compareR[l-1]!=characters[2] && compareR[k]!=characters[k] && l!=2){
-						r++;
-					System.out.println("2: "+r);
-				} 
-				if(compareR[3]==characters[k] && compareR[k]==characters[3] &&  compareR[3]!=characters[l-1] && compareR[l-1]!=characters[3] && compareR[k]!=characters[k] && l!=3){
-						r++;
-					System.out.println("3: "+r);
+				if(compareR[0]==characters[k] && k!=0){
+					r++;
 				}
-			
+				if(compareR[1]==characters[k] && k!=1){
+					r++;
+				}
+				if(compareR[2]==characters[k] && k!=2){
+					r++;
+				}
+				if(compareR[3]==characters[k] && k!=3){
+					r++;
+				}
 			}
 				
 
