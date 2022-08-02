@@ -42,6 +42,7 @@ public class index{
 		while(i<11){
 			b=0; // puntaje
 			r=0; // puntaje
+			l=0;
 			System.out.print("\nIntento "+i+"\nEscribe la combinacion que piensas que sea correcta >> [uhdl], [fkcy] ");
 			respuesta = in.nextLine();
 			System.out.println();
@@ -53,18 +54,47 @@ public class index{
 					}
 			}
 			for(k=0;k<4;k++){
+				l=k+1;
 				if(compareR[0]==characters[k] && k!=0){
-					r++;
+					if(compareR[k]==characters[0]){
+						if(compareR[k]==characters[l-1]){
+							if(compareR[l-1]==characters[k]){
+							r++;
+							}
+						}
+					}
 				}
+				System.out.println("R 0: "+r);
 				if(compareR[1]==characters[k] && k!=1){
-					r++;
+					if(compareR[k]==characters[1]){
+						if(compareR[k]==characters[l-1]){
+							if(compareR[l-1]==characters[k]){
+							r++;
+							}
+						}
+					}
 				}
+				System.out.println("R 1: "+r);
 				if(compareR[2]==characters[k] && k!=2){
-					r++;
+					if(compareR[k]==characters[2]){
+						if(compareR[k]==characters[l-1]){
+							if(compareR[l-1]==characters[k]){
+							r++;
+							}
+						}
+					}
 				}
+				System.out.println("R 2: "+r);
 				if(compareR[3]==characters[k] && k!=3){
-					r++;
+					if(compareR[k]==characters[3]){
+						if(compareR[k]==characters[l-1]){
+							if(compareR[l-1]==characters[k]){
+							r++;
+							}
+						}
+					}
 				}
+				System.out.println("R 3: "+r);
 			}
 				
 
